@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E21171B2929F2EE00C7A1CE /* TitleTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2117192929F2EE00C7A1CE /* TitleTVC.swift */; };
-		2E21171C2929F2EE00C7A1CE /* TitleTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E21171A2929F2EE00C7A1CE /* TitleTVC.xib */; };
-		2E21171E2929F3C900C7A1CE /* TitleDM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E21171D2929F3C900C7A1CE /* TitleDM.swift */; };
+		2E87CB4C292CD80400BB8FB9 /* TaskDM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E87CB4B292CD80400BB8FB9 /* TaskDM.swift */; };
+		2E87CB4E292CD85D00BB8FB9 /* PriorityEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E87CB4D292CD85D00BB8FB9 /* PriorityEnum.swift */; };
+		2E87CB50292CD89D00BB8FB9 /* TaskGroupDM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E87CB4F292CD89D00BB8FB9 /* TaskGroupDM.swift */; };
+		2E87CB52292CD8D700BB8FB9 /* GroupeTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E87CB51292CD8D700BB8FB9 /* GroupeTypeEnum.swift */; };
 		2ECA75A3292943A600911F95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECA75A2292943A600911F95 /* AppDelegate.swift */; };
 		2ECA75AC292943A600911F95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2ECA75AB292943A600911F95 /* Assets.xcassets */; };
 		2ECA75AF292943A600911F95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ECA75AD292943A600911F95 /* LaunchScreen.storyboard */; };
@@ -22,14 +23,13 @@
 		2ECA75C32929509D00911F95 /* ChooseVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2ECA75C12929509D00911F95 /* ChooseVC.xib */; };
 		2ECA75C62929548900911F95 /* ItemsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECA75C42929548900911F95 /* ItemsTVC.swift */; };
 		2ECA75C72929548900911F95 /* ItemsTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2ECA75C52929548900911F95 /* ItemsTVC.xib */; };
-		2ECA75C92929582100911F95 /* CellDM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECA75C82929582100911F95 /* CellDM.swift */; };
-		2ECA75CB2929615200911F95 /* PriorityDM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECA75CA2929615200911F95 /* PriorityDM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2E2117192929F2EE00C7A1CE /* TitleTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTVC.swift; sourceTree = "<group>"; };
-		2E21171A2929F2EE00C7A1CE /* TitleTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleTVC.xib; sourceTree = "<group>"; };
-		2E21171D2929F3C900C7A1CE /* TitleDM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleDM.swift; sourceTree = "<group>"; };
+		2E87CB4B292CD80400BB8FB9 /* TaskDM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDM.swift; sourceTree = "<group>"; };
+		2E87CB4D292CD85D00BB8FB9 /* PriorityEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityEnum.swift; sourceTree = "<group>"; };
+		2E87CB4F292CD89D00BB8FB9 /* TaskGroupDM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskGroupDM.swift; sourceTree = "<group>"; };
+		2E87CB51292CD8D700BB8FB9 /* GroupeTypeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupeTypeEnum.swift; sourceTree = "<group>"; };
 		2ECA759F292943A600911F95 /* my to-do list.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "my to-do list.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ECA75A2292943A600911F95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2ECA75AB292943A600911F95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -44,8 +44,6 @@
 		2ECA75C12929509D00911F95 /* ChooseVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChooseVC.xib; sourceTree = "<group>"; };
 		2ECA75C42929548900911F95 /* ItemsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsTVC.swift; sourceTree = "<group>"; };
 		2ECA75C52929548900911F95 /* ItemsTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemsTVC.xib; sourceTree = "<group>"; };
-		2ECA75C82929582100911F95 /* CellDM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellDM.swift; sourceTree = "<group>"; };
-		2ECA75CA2929615200911F95 /* PriorityDM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityDM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +62,6 @@
 			children = (
 				2ECA75C42929548900911F95 /* ItemsTVC.swift */,
 				2ECA75C52929548900911F95 /* ItemsTVC.xib */,
-				2E2117192929F2EE00C7A1CE /* TitleTVC.swift */,
-				2E21171A2929F2EE00C7A1CE /* TitleTVC.xib */,
 			);
 			path = TVC;
 			sourceTree = "<group>";
@@ -73,9 +69,10 @@
 		2E211720292A11D600C7A1CE /* DM */ = {
 			isa = PBXGroup;
 			children = (
-				2ECA75C82929582100911F95 /* CellDM.swift */,
-				2ECA75CA2929615200911F95 /* PriorityDM.swift */,
-				2E21171D2929F3C900C7A1CE /* TitleDM.swift */,
+				2E87CB4B292CD80400BB8FB9 /* TaskDM.swift */,
+				2E87CB4D292CD85D00BB8FB9 /* PriorityEnum.swift */,
+				2E87CB4F292CD89D00BB8FB9 /* TaskGroupDM.swift */,
+				2E87CB51292CD8D700BB8FB9 /* GroupeTypeEnum.swift */,
 			);
 			path = DM;
 			sourceTree = "<group>";
@@ -187,7 +184,6 @@
 				2ECA75C72929548900911F95 /* ItemsTVC.xib in Resources */,
 				2ECA75AF292943A600911F95 /* LaunchScreen.storyboard in Resources */,
 				2ECA75C32929509D00911F95 /* ChooseVC.xib in Resources */,
-				2E21171C2929F2EE00C7A1CE /* TitleTVC.xib in Resources */,
 				2ECA75AC292943A600911F95 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -202,13 +198,13 @@
 				2ECA75A3292943A600911F95 /* AppDelegate.swift in Sources */,
 				2ECA75BC2929485900911F95 /* NewTaskVC.swift in Sources */,
 				2ECA75C62929548900911F95 /* ItemsTVC.swift in Sources */,
-				2E21171E2929F3C900C7A1CE /* TitleDM.swift in Sources */,
 				2ECA75C22929509D00911F95 /* ChooseVC.swift in Sources */,
+				2E87CB52292CD8D700BB8FB9 /* GroupeTypeEnum.swift in Sources */,
+				2E87CB50292CD89D00BB8FB9 /* TaskGroupDM.swift in Sources */,
+				2E87CB4E292CD85D00BB8FB9 /* PriorityEnum.swift in Sources */,
 				2ECA75B8292943E700911F95 /* MainVC.swift in Sources */,
-				2E21171B2929F2EE00C7A1CE /* TitleTVC.swift in Sources */,
+				2E87CB4C292CD80400BB8FB9 /* TaskDM.swift in Sources */,
 				2ECA75BF29294B0200911F95 /* EX+UIview.swift in Sources */,
-				2ECA75CB2929615200911F95 /* PriorityDM.swift in Sources */,
-				2ECA75C92929582100911F95 /* CellDM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

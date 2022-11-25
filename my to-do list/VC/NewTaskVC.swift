@@ -11,10 +11,11 @@ class NewTaskVC: UIViewController {
     
     @IBOutlet weak var addView: UIView!
     @IBOutlet weak var taskTitleTF: UITextField!
-    @IBOutlet weak var descriptionTF: UITextField!
+    @IBOutlet weak var discriptionTV: UITextView!
     @IBOutlet weak var PriorityBtn: UIButton!
     
-    var sendInfo : ((CellDM?)->Void)?
+    
+//    var sendInfo : ((CellDM?)->Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,10 +23,34 @@ class NewTaskVC: UIViewController {
         addView.layer.borderColor = UIColor.green.cgColor
         addView.layer.borderWidth = 1.0
         
+        addView.transform = .init(translationX: 0, y: 1000)
+        self.view.backgroundColor = .clear
+        
+        
     }
         
+    override func viewWillAppear(_ animated: Bool) {
+        UIView.animate(withDuration: 0.1, delay: 0, options: .curveEaseIn){
+            
+            self.addView.transform = .identity
+            self.view.backgroundColor = .gray.withAlphaComponent(0.2)
+            
+        }
+        
+    }
+    
+    
+    
+    
+    
     @IBAction func goBack(_ sender: Any) {
-        self.dismiss(animated: true)
+        UIView.animate(withDuration: 0.1, delay: 0, options: .curveEaseIn){
+            self.addView.transform = .init(translationX: 0, y: 1000)
+            self.view.backgroundColor = .clear } completion: { _ in
+                self.dismiss(animated: false)
+
+            }
+        
     }
     
     @IBAction func addTapped(_ sender: Any) {
@@ -33,7 +58,7 @@ class NewTaskVC: UIViewController {
         
         if !txt.isEmpty {
             
-            sendInfo?(CellDM(title: taskTitleTF.text ?? "", caption: descriptionTF.text ?? "" , cycle: PriorityBtn.backgroundColor ))
+//            sendInfo?(CellDM(title: taskTitleTF.text ?? "", caption: discriptionTV.text ?? "" , cycle: PriorityBtn.backgroundColor ))
             
             self.dismiss(animated: true)
                       
@@ -45,19 +70,19 @@ class NewTaskVC: UIViewController {
     @IBAction func choiseTapped(_ sender: Any) {
         
         let vc = ChooseVC(nibName: "ChooseVC", bundle: nil)
-        vc.delegate = self
+//        vc.delegate = self
         vc.modalPresentationStyle = .overFullScreen
         self.present(vc, animated: true)
     }
 }
 
 //MARK:-GetColorAndTitleDelegate
-extension NewTaskVC : GetColorAndTitleDelegate{
-    func getColorAndTitle(info: PriorityDM) {
-        PriorityBtn.backgroundColor = info.color
-        PriorityBtn.setTitle(info.title, for: .normal)
-    }
-}
+//extension NewTaskVC : GetColorAndTitleDelegate{
+//    func getColorAndTitle(info: PriorityDM) {
+//        PriorityBtn.backgroundColor = info.color
+//        PriorityBtn.setTitle(info.title, for: .normal)
+//    }
+//}
 
 //MARK:-showAlert
 extension NewTaskVC {

@@ -6,17 +6,18 @@
 //
 
 import Foundation
+import UIKit
 
 struct TitleDM {
     var title : String
-//    var item : CellDM?
+    var cells : [CellDM]
 }
 
-//struct CellDM {
-//
-//    var title : String
-//    var caption : String
-//    var cycle : UIColor?
+struct CellDM {
+
+    var title : String
+    var caption : String
+    var cycle : UIColor?
 //    var cellColor : UIColor?
-//
-//}
+
+}

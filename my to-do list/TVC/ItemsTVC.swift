@@ -18,16 +18,9 @@ class ItemsTVC: UITableViewCell {
     
 
     @IBOutlet weak var titleLbl: UILabel!
-    @IBOutlet weak var captionLbl: UILabel!
-    @IBOutlet weak var cycleView: UIView!
-    @IBOutlet weak var cellView: UIView!
-    
-    
-    
-    
-    
-    
-    
+    @IBOutlet weak var subTitleLbl: UILabel!
+    @IBOutlet weak var priorityView: UIView!
+    @IBOutlet weak var typeView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -37,11 +30,32 @@ class ItemsTVC: UITableViewCell {
 
     
     
-    func updateCell( info : CellDM) {
-        titleLbl.text = info.title
-        captionLbl.text = info.caption
-        cycleView.backgroundColor = info.cycle
-        cellView.backgroundColor = info.cellColor
+    func updateCell( task : TaskDM , groupType : GroupTypeEnum ) {
+        
+        titleLbl.text = task.title
+        subTitleLbl.text = task.subtitle
+        
+        switch task.priority {
+        case .high:
+            priorityView.backgroundColor = .systemRed
+        case .medium:
+            priorityView.backgroundColor = .systemOrange
+        case .low:
+            priorityView.backgroundColor = .systemGreen
+        case .none:
+            priorityView.backgroundColor = .systemGray
+
+        }
+    
+        switch groupType {
+        case .new :
+            typeView.backgroundColor = .systemGray6
+        case .archived:
+            typeView.backgroundColor = .systemGray4
+        case .fineshed:
+            typeView.backgroundColor = .systemGray2
+        }
+        
     }
   
     
