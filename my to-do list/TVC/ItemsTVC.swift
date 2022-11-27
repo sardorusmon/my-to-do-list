@@ -28,38 +28,29 @@ class ItemsTVC: UITableViewCell {
 
     }
 
-    
-    
     func updateCell( task : TaskDM , groupType : GroupTypeEnum ) {
-        
-        titleLbl.text = task.title
-        subTitleLbl.text = task.subtitle
-        
-        switch task.priority {
-        case .high:
-            priorityView.backgroundColor = .systemRed
-        case .medium:
-            priorityView.backgroundColor = .systemOrange
-        case .low:
-            priorityView.backgroundColor = .systemGreen
-        case .none:
-            priorityView.backgroundColor = .systemGray
+    
+    titleLbl.text = task.title
+    subTitleLbl.text = task.subtitle
+    priorityView.backgroundColor = task.priority.setPrioriyColor()
+    
 
-        }
-    
-        switch groupType {
-        case .new :
-            typeView.backgroundColor = .systemGray6
-        case .archived:
-            typeView.backgroundColor = .systemGray4
-        case .fineshed:
-            typeView.backgroundColor = .systemGray2
-        }
-        
+    switch groupType {
+    case .new :
+        typeView.backgroundColor = .systemGray6
+    case .archived:
+        typeView.backgroundColor = .systemGray4
+    case .fineshed:
+        typeView.backgroundColor = .systemGray2
+    case .unfinesh:
+        print("unfinesh")
+    case .unArchive:
+        print("unArchive")
+    case .deleted:
+        print("deleted")
     }
-  
     
-    
-    
+}
+
     
 }

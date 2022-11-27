@@ -9,5 +9,5 @@ import Foundation
 
 
 enum GroupTypeEnum : String {
-    case new , archived , fineshed
+    case new , archived , fineshed ,unfinesh, unArchive , deleted
 }

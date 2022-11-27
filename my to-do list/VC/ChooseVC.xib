@@ -25,7 +25,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </view>
-                    <blurEffect style="regular"/>
+                    <blurEffect style="light"/>
                 </visualEffectView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JuW-OI-v96">
                     <rect key="frame" x="20" y="487" width="374" height="340"/>
@@ -50,10 +50,10 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                     <connections>
-                                        <action selector="choiceTapped:" destination="-1" eventType="touchUpInside" id="ltR-d5-lH8"/>
+                                        <action selector="choiceTapped:" destination="-1" eventType="touchUpInside" id="Bq7-km-97l"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SKl-CB-uX1">
+                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SKl-CB-uX1">
                                     <rect key="frame" x="0.0" y="80" width="334" height="60"/>
                                     <color key="backgroundColor" systemColor="systemYellowColor"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
@@ -67,10 +67,10 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                     <connections>
-                                        <action selector="choiceTapped:" destination="-1" eventType="touchUpInside" id="iud-0j-S1R"/>
+                                        <action selector="choiceTapped:" destination="-1" eventType="touchUpInside" id="APT-Kc-UPg"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A56-9O-Kdp">
+                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A56-9O-Kdp">
                                     <rect key="frame" x="0.0" y="160" width="334" height="60"/>
                                     <color key="backgroundColor" systemColor="systemGreenColor"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
@@ -84,10 +84,10 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                     <connections>
-                                        <action selector="choiceTapped:" destination="-1" eventType="touchUpInside" id="VeH-gi-87A"/>
+                                        <action selector="choiceTapped:" destination="-1" eventType="touchUpInside" id="Vjs-rY-mTm"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BfA-S3-buR">
+                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BfA-S3-buR">
                                     <rect key="frame" x="0.0" y="240" width="334" height="60"/>
                                     <color key="backgroundColor" systemColor="systemGray2Color"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
@@ -101,7 +101,7 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                     <connections>
-                                        <action selector="choiceTapped:" destination="-1" eventType="touchUpInside" id="Gmn-D5-hFc"/>
+                                        <action selector="choiceTapped:" destination="-1" eventType="touchUpInside" id="hX0-ue-vBb"/>
                                     </connections>
                                 </button>
                             </subviews>

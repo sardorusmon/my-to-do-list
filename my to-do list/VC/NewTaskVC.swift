@@ -15,19 +15,17 @@ class NewTaskVC: UIViewController {
     @IBOutlet weak var PriorityBtn: UIButton!
     
     
-//    var sendInfo : ((CellDM?)->Void)?
+    var newTAsk : TaskDM = TaskDM(title: "", subtitle: "", priority: .none)
+    var addNewTask : ((TaskDM)->Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        addView.layer.borderColor = UIColor.green.cgColor
-        addView.layer.borderWidth = 1.0
-        
-        addView.transform = .init(translationX: 0, y: 1000)
-        self.view.backgroundColor = .clear
+      setUpView()
         
         
     }
+    
         
     override func viewWillAppear(_ animated: Bool) {
         UIView.animate(withDuration: 0.1, delay: 0, options: .curveEaseIn){
@@ -39,11 +37,58 @@ class NewTaskVC: UIViewController {
         
     }
     
+    @IBAction func goBack(_ sender: Any) { dismissVC() }
     
+    @IBAction func addTapped(_ sender: Any) {
+        
+        
+        newTAsk.title = taskTitleTF.text!
+        newTAsk.subtitle = discriptionTV.text!
+        guard let txt = taskTitleTF.text else {return}
+        if !txt.isEmpty {
+            guard let addNewTask = addNewTask else {return}
+            addNewTask(newTAsk)
+            dismissVC()
+        } else {
+            
+            showAlert(groupType: nil, title: "Task title can not be empty", message: "Please write the task in order to create a new task.", type: .alert){_ in}
+            
+                }
+    }
     
-    
-    
-    @IBAction func goBack(_ sender: Any) {
+    @IBAction func choiseTapped(_ sender: Any) {
+        
+        let vc = ChooseVC(nibName: "ChooseVC", bundle: nil)
+        vc.choosenPriority = { pri in
+            self.newTAsk.priority = pri
+            self.PriorityBtn.backgroundColor = pri == .none ? .systemGray : pri.setPrioriyColor()
+        }
+        
+        vc.titleBtn = {title in
+            self.PriorityBtn.setTitle(title.capitalized, for: .normal)
+            
+        }
+        vc.modalPresentationStyle = .overFullScreen
+        self.present(vc, animated: false)
+    }
+}
+//MARK: -setUpView
+extension NewTaskVC {
+    func setUpView() {
+        addView.layer.borderColor = UIColor.green.cgColor
+        addView.layer.borderWidth = 1.0
+        addView.transform = .init(translationX: 0, y: 1000)
+        self.view.backgroundColor = .clear
+        discriptionTV.layer.borderColor = UIColor.systemGray4.cgColor
+        discriptionTV.layer.borderWidth = 1
+        discriptionTV.cornerRadius = 5
+    }
+
+}
+
+//MARK: -dismissVC
+extension NewTaskVC {
+    func dismissVC() {
         UIView.animate(withDuration: 0.1, delay: 0, options: .curveEaseIn){
             self.addView.transform = .init(translationX: 0, y: 1000)
             self.view.backgroundColor = .clear } completion: { _ in
@@ -52,46 +97,7 @@ class NewTaskVC: UIViewController {
             }
         
     }
-    
-    @IBAction func addTapped(_ sender: Any) {
-        guard let txt = taskTitleTF.text else {return}
-        
-        if !txt.isEmpty {
-            
-//            sendInfo?(CellDM(title: taskTitleTF.text ?? "", caption: discriptionTV.text ?? "" , cycle: PriorityBtn.backgroundColor ))
-            
-            self.dismiss(animated: true)
-                      
-        } else {
-            showAlert(title: "Task title can not be empty", message: "Please write the task in order to create a new task.")
-        }
-    }
-    
-    @IBAction func choiseTapped(_ sender: Any) {
-        
-        let vc = ChooseVC(nibName: "ChooseVC", bundle: nil)
-//        vc.delegate = self
-        vc.modalPresentationStyle = .overFullScreen
-        self.present(vc, animated: true)
-    }
 }
 
-//MARK:-GetColorAndTitleDelegate
-//extension NewTaskVC : GetColorAndTitleDelegate{
-//    func getColorAndTitle(info: PriorityDM) {
-//        PriorityBtn.backgroundColor = info.color
-//        PriorityBtn.setTitle(info.title, for: .normal)
-//    }
-//}
 
-//MARK:-showAlert
-extension NewTaskVC {
-    func showAlert(title : String , message : String ){
-    
-        let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default)
-        alertVC.addAction(okAction)
-        self.present(alertVC, animated: true)
-        
-    }
-}
+
